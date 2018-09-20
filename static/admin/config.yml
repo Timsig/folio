@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: Timsig/folio
 
 media_folder: static/assets
 public_folder: assets
