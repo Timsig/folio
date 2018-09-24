@@ -22,7 +22,8 @@ collections:
     create: true
     fields:
       - { name: path, label: Path }
-      - { name: "thumbnail", label: "Featured Image", widget: "image" }
+      - { name: featured image, label: Featured Image, widget: image }
+      - { name: main image, label: Main image, widget: image }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
   
