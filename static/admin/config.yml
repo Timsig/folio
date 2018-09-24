@@ -17,13 +17,13 @@ collections:
       - { name: body, label: Body, widget: markdown }
 
   - name: folio
-  label: Folio
-  folder: folio
-  create: true
-  fields:
-    - { name: path, label: Path }
-    - { name: "thumbnail", label: "Featured Image", widget: "image" }
-    - { name: title, label: Title }
-    - { name: body, label: Body, widget: markdown }
+    label: Folio
+    folder: folio
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: "thumbnail", label: "Featured Image", widget: "image" }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }
   
   
