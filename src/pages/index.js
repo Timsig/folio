@@ -1,3 +1,5 @@
-import React from "react"
+import React from "react";
+import "../styles/site.scss";
+import TopNav from "../components/TopNav.js";
 
-export default () => <div>Hello world, from Tim's folio</div>
+export default () => <TopNav />

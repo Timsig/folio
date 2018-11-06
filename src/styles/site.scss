@@ -1,0 +1,26 @@
+$darkblue: #171e41;
+$green: #7cd1a0;
+$purp: #a33d85;
+$sansStack: "Fira Sans", sans-serif; 
+
+
+.topNav {
+  background-color: $darkblue;
+  margin: 24px 24px 0 24px;
+  height: 84px;
+  font-family: $sansStack;
+  font-size: 24px;
+  font-weight: 700;
+  
+  
+    .homeLink {
+      color: $green;
+      width: 84px;
+      border-left: 1px solid $green;
+      border-right: 1px solid $green;
+      margin: 0 0 0 84px;
+      text-align: center;
+      line-height: 84px;
+    }
+  
+}
