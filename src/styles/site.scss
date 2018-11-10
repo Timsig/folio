@@ -1,26 +1,77 @@
 $darkblue: #171e41;
 $green: #7cd1a0;
 $purp: #a33d85;
-$sansStack: "Fira Sans", sans-serif; 
+$offwhite:#b9bbc6;
+$white: #ffffff;
+$sansStack: "Fira Sans", sans-serif;
+$bodyFontSize: 18px;
+$bodyLineHeight: 28px;  
 
 
 .topNav {
   background-color: $darkblue;
   margin: 24px 24px 0 24px;
   height: 84px;
+  padding: 0 84px 0 84px;
   font-family: $sansStack;
-  font-size: 24px;
   font-weight: 700;
+  line-height: ($bodyLineHeight * 3) - 2px;
+  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: space-between;
   
+    a {
+      text-decoration: none;
+      color: $offwhite; 
+      
+      &:hover {
+        color: $white;
+      }
+
+      &.active{
+      color: $green;
+      }
+    }
+
+    
+    
   
     .homeLink {
-      color: $green;
       width: 84px;
+      font-size: $bodyFontSize * 1.33;
       border-left: 1px solid $green;
       border-right: 1px solid $green;
-      margin: 0 0 0 84px;
       text-align: center;
-      line-height: 84px;
+      padding-top: 2px; 
+    }
+
+    .menu ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+
+      li {
+        
+        margin: 0 24px 0 24px;
+        padding-top: 2px;
+        display: flex;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          max-height: 82px;
+          // line-height: ($bodyLineHeight * 3) - 2px;
+
+          &.active { 
+            border-bottom: 4px solid $green;
+          }
+        }
+      }
     }
   
 }
