@@ -4,24 +4,25 @@ import Link from "gatsby-link";
 
 export default () => 
   <div className="topNav">
-   <Link to="/"><nav className="homeLink">TS</nav></Link>
+   <nav className="homeLink">
+      <Link to="/" activeClassName="active">
+        TS
+      </Link>
+    </nav>
     <nav className="menu">
       <ul>
         <li>
-          <Link to="/portfolio/"
-          activeClassName="active">
+          <Link to="/portfolio/" activeClassName="active">
             PORTFOLIO
           </Link>
         </li>
         <li>
-          <Link to="/about/"
-          activeClassName="active">
+          <Link to="/about/" activeClassName="active">
             ABOUT
           </Link>
         </li>
         <li>
-          <Link to="/contact/"
-          activeClassName="active">
+          <Link to="/contact/" activeClassName="active">
             CONTACT
           </Link>
         </li>

@@ -4,19 +4,35 @@ $purp: #a33d85;
 $offwhite:#b9bbc6;
 $white: #ffffff;
 $sansStack: "Fira Sans", sans-serif;
+$baseUnit: 4px;
 $bodyFontSize: 18px;
-$bodyLineHeight: 28px;  
+$bodyLineHeight: 28px; 
+
+html, body {
+  font-size: $bodyFontSize;
+  margin: 0;
+}
+
+h1 {
+  font-family: $sansStack;
+  font-size: 2.45em;
+  font-weight: 700;
+  line-height: 1.25;
+  color: $darkblue;
+  margin: 0;
+  display: inline-block;
+}
 
 
 .topNav {
   background-color: $darkblue;
-  margin: 24px 24px 0 24px;
+  margin: 24px 24px 24px 24px;
   height: 84px;
   padding: 0 84px 0 84px;
   font-family: $sansStack;
-  font-weight: 700;
+  font-weight: 500;
   line-height: ($bodyLineHeight * 3) - 2px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   display: flex;
   justify-content: space-between;
   
@@ -73,5 +89,21 @@ $bodyLineHeight: 28px;
         }
       }
     }
-  
+}
+
+.page-content {
+  margin: 0 auto;
+  max-width: 1024px;
+  background: $offwhite;
+}
+
+.home-content {
+  margin: 0 24px 24px 24px;
+  height: calc(100vh - 156px);
+  background: $darkblue;
+ 
+
+  h1 {
+    color: $green;
+  }
 }
