@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/site.scss";
-import PageLayout from "../components/PageLayout.js";
+import SiteLayout from "../components/SiteLayout.js";
 
 export default () =>
   
-    <PageLayout>
+    <SiteLayout>
       <h1>This is the about page</h1>
-    </PageLayout>
+    </SiteLayout>
   

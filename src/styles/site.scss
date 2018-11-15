@@ -91,19 +91,19 @@ h1 {
     }
 }
 
-.page-content {
-  margin: 0 auto;
-  max-width: 1024px;
-  background: $offwhite;
-}
+// .page-content {
+//   margin: 0 auto;
+//   max-width: 1024px;
+//   background: $offwhite;
+// }
 
-.home-content {
+.page-content-outer {
   margin: 0 24px 24px 24px;
   height: calc(100vh - 156px);
-  background: $darkblue;
+  background: $offwhite;
  
 
   h1 {
-    color: $green;
+    color: $darkblue;
   }
 }

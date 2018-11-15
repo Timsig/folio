@@ -1,8 +1,8 @@
 ---
-path: gourmet traveller
+path: animal
 type: case study
 featured image: /assets/new-cook.jpg
 main image: /assets/new-cook.jpg
-title: Gourmet Traveller
+title: Animal Website
 ---
-A post about Gourmet Traveller
+A post about the Animal website.
