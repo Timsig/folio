@@ -3,6 +3,7 @@ $green: #7cd1a0;
 $purp: #a33d85;
 $offwhite:#b9bbc6;
 $white: #ffffff;
+$copy: #3a4455;
 $sansStack: "Fira Sans", sans-serif;
 $serifStack: "Lora", serif;
 $baseUnit: 4px;
@@ -11,18 +12,36 @@ $bodyLineHeight: 28px;
 
 html, body {
   font-size: $bodyFontSize;
+  line-height: $bodyLineHeight;
   margin: 0;
 }
 
-h1 {
+h1, h2 {
   font-family: $sansStack;
+  color: $darkblue;
+  
+}
+
+h1 {
   font-size: 2.45em;
   font-weight: 700;
-  line-height: 1.25;
-  color: $darkblue;
-  margin: 0;
-  display: inline-block;
+  line-height: $bodyLineHeight*2;
+  margin: 0 0 $baseUnit*3 0;
 }
+
+h2 {
+  font-size: 1.95em;
+  font-weight: 400;
+  line-height: $baseUnit*11;
+  margin: 0 0 $baseUnit*6 0;
+}
+
+p {
+  font-family: $serifStack;
+  margin: 0 0 $bodyLineHeight 0;
+}
+
+
 
 
 .topNav {
