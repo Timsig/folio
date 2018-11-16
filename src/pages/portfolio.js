@@ -22,6 +22,7 @@ export const query = graphql`
       allMarkdownRemark {
         edges {
           node {
+            id
             frontmatter {
               title
               featured_image
