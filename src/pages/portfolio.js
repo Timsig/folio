@@ -1,24 +1,32 @@
 import React from "react";
-import "../styles/site.scss";
+
 import { graphql } from "gatsby";
 import SiteLayout from "../components/SiteLayout.js";
 
 export default ({ data }) =>
-  { console.log(data);
+  { 
+  const { edges: posts } = data.allMarkdownRemark;
     return(
       <SiteLayout>
         <h1>This is the portfolio page</h1>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <h2 key={node.id}>{node.frontmatter.title}</h2>
-          </div>
-        ))}
+        {
+          posts
+            .filter(post => post.node.frontmatter.type === "case study")
+                .map(({ node }) => (
+                  <div key={node.id}>
+                    <h2 key={node.id}>{node.frontmatter.title}</h2>
+                  </div>
+                )
+        )}
       </SiteLayout>
     )
 }
 
+
+  
+
 export const query = graphql`
-  query {
+    query {
       allMarkdownRemark {
         edges {
           node {

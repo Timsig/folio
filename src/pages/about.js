@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/site.scss";
+
 import SiteLayout from "../components/SiteLayout.js";
 
 export default () =>
