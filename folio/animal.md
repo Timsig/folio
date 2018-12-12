@@ -3,7 +3,7 @@ path: animal
 type: case study
 featured image: /assets/new-cook.jpg
 main image: /assets/new-cook.jpg
-title: Animal Website
+title: Basket case
 ---
 # Animal e-commerce checkout redesign
 

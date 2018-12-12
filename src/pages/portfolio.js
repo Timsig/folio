@@ -42,3 +42,22 @@ export const query = graphql`
     }
   
 `
+
+// correct query:
+// query {
+//   allMarkdownRemark(
+//     filter: {
+//       frontmatter: { type: { eq: "case study" } }
+//     }
+//   ) {
+//     edges {
+//       node {
+//         frontmatter {
+//           title
+//           featured_image
+//           type
+//         }
+//       }
+//     }
+//   }
+// }

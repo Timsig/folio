@@ -4,6 +4,7 @@ $purp: #a33d85;
 $offwhite:#b9bbc6;
 $white: #ffffff;
 $copy: #3a4455;
+$background: #f0ede9;
 $sansStack: "Fira Sans", sans-serif;
 $serifStack: "Lora", serif;
 $baseUnit: 4px;
@@ -14,6 +15,7 @@ html, body {
   font-size: $bodyFontSize;
   line-height: $bodyLineHeight;
   margin: 0;
+  background-color: $background;
 }
 
 h1, h2 {
