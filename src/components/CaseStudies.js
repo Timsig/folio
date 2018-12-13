@@ -1,17 +1,38 @@
 import React from "react";
 import styles from "../styles/casestudies.module.scss";
-import { graphql } from "gatsby";
+import { StaticQuery, graphql } from "gatsby";
+import CaseStudyPreview from "./CaseStudyPreview";
 
-export default ({ data }) => {
- console.log(data);
-  return(
-    <div className={styles.caseStudies}>
-       {/* {data.edges.map(({ node }) => ( */}
-   {/* <h2 key={node.id}>{node.frontmatter.title}</h2> */}
-   {/* ))} */}
-    </div>
-  )
-}
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allMarkdownRemark(
+          filter: {
+            frontmatter: { type: { eq: "case study" } }
+          }
+          ) {
+          edges {
+            node {
+              frontmatter {
+                title
+                featured_image
+                type
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <div className={styles.caseStudies}>
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <CaseStudyPreview key={node.id} title={node.frontmatter.title} image={node.frontmatter.featured_image} />
+      ))}
+      </div>
+    )}
+  />
+)
 
 
 

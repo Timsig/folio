@@ -7,3 +7,4 @@ export default () =>
   <h1>This is the homepage.</h1>
   <CaseStudies />
 </SiteLayout>
+
