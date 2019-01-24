@@ -14,6 +14,7 @@ export default () => (
           ) {
           edges {
             node {
+              id
               frontmatter {
                 title
                 featured_image

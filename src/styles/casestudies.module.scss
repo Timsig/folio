@@ -1,6 +1,26 @@
+@import "./global.scss";
+
 .caseStudies {
-  height: 20px;
   background-color: tomato;
+  max-width: 1024px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+}
+
+.caseStudyPreview {
+  background: #ffffff;
+  width: 33%;
+  margin-right: 24px;
+  text-align: left; 
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  
+}
+
+h2.cardTitle {
+  font-weight: 500;
+  margin: $baseUnit*4 $baseUnit*4 0px $baseUnit*4;
 }
