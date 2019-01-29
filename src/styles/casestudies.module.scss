@@ -1,7 +1,6 @@
 @import "./global.scss";
 
 .caseStudies {
-  background-color: tomato;
   max-width: 1024px;
   margin: 0 auto;
   display: flex;
@@ -9,13 +8,53 @@
 }
 
 .caseStudyPreview {
+  position: relative;
   background: #ffffff;
   width: 33%;
   margin-right: 24px;
-  text-align: left; 
+  text-align: left;
+  min-height: 424px; 
 
   &:last-child {
     margin-right: 0px;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 100%;
+    height: $baseUnit*2;
+    top: 0px;
+    left: 0px;
+    background-color: $purp;
+    z-index: 100;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &>.readMore {
+    font-family: $sansStack;
+    font-size: $bodyFontSize;
+    line-height: $baseUnit*7;
+    text-transform: uppercase;
+    color: $copy;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    bottom: $baseUnit*2;
+    right: $baseUnit*4;
+    margin: 0px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover>.readMore {
+    opacity: 1;
   }
   
 }
@@ -24,3 +63,10 @@ h2.cardTitle {
   font-weight: 500;
   margin: $baseUnit*4 $baseUnit*4 0px $baseUnit*4;
 }
+
+.cardIntro {
+  color: $copy;
+  letter-spacing: -0.19px;
+  margin: 0px $baseUnit*4 0px $baseUnit*4;
+}
+

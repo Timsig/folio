@@ -16,8 +16,10 @@ export default () => (
             node {
               id
               frontmatter {
-                title
+                thumb
                 featured_image
+                title
+                intro
                 type
               }
             }
@@ -28,7 +30,7 @@ export default () => (
     render={data => (
       <div className={styles.caseStudies}>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <CaseStudyPreview key={node.id} title={node.frontmatter.title} image={node.frontmatter.featured_image} />
+        <CaseStudyPreview key={node.id} title={node.frontmatter.title} intro={node.frontmatter.intro} thumb={node.frontmatter.thumb} image={node.frontmatter.featured_image} />
       ))}
       </div>
     )}

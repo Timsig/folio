@@ -18,7 +18,7 @@ html, body {
   background-color: $background;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
   font-family: $sansStack;
   color: $darkblue;
   
@@ -56,6 +56,4 @@ p {
 
 .page-content-outer {
   margin: 0 24px 24px 24px;
-  height: calc(100vh - 156px);
-  background: $offwhite;
 }

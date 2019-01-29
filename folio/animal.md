@@ -1,9 +1,10 @@
 ---
 path: animal
 type: case study
-featured image: /assets/animal-checkout.jpg
+thumb: /assets/thumbs/animal_thumbnail.jpg
 main image: /assets/animal-checkout.jpg
 title: Basket case
+intro: Simplifying the path to purchase for online fashionistas
 ---
 # Animal e-commerce checkout redesign
 

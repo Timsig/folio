@@ -1,0 +1,18 @@
+@import "./global.scss";
+
+
+.mainImageWrap {
+  height: calc(100vh - 156px);
+  width: 100%;
+  background-color: $darkblue;
+  background-image: url("/assets/homepage_image.jpg");
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+  margin-bottom: -$baseUnit*16;
+}
+
+.homePageContent {
+  
+}
+

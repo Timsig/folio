@@ -1,8 +1,9 @@
 ---
 path: gourmet traveller
 type: case study
-featured image: /assets/new-cook.jpg
+thumb: /assets/thumbs/gourmet_thumbnail.jpg
 main image: /assets/new-cook.jpg
-title: Now we're cooking
+title: Taste test
+intro: Keeping gastronomy simple
 ---
 A post about Gourmet Traveller
