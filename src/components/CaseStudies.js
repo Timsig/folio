@@ -39,22 +39,22 @@ export default () => (
 
 
 
-export const query = graphql`
-query {
-  allMarkdownRemark(
-    filter: {
-      frontmatter: { type: { eq: "case study" } }
-    }
-  ) {
-    edges {
-      node {
-        frontmatter {
-          title
-          featured_image
-          type
-        }
-      }
-    }
-  }
-}
-`
+// export const query = graphql`
+// query {
+//   allMarkdownRemark(
+//     filter: {
+//       frontmatter: { type: { eq: "case study" } }
+//     }
+//   ) {
+//     edges {
+//       node {
+//         frontmatter {
+//           title
+//           featured_image
+//           type
+//         }
+//       }
+//     }
+//   }
+// }
+// `
