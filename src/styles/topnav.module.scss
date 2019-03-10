@@ -14,14 +14,21 @@
   
     a {
       text-decoration: none;
-      color: $offwhite; 
+      color: $offwhite;
+      transition: all 0.3s ease-in-out; 
       
       &:hover {
         color: $white;
+        
       }
 
       &.active{
       color: $green;
+      
+        &::after {
+          transform:translateY(-4px);
+          transition: inherit;
+        }
       }
     }
 
@@ -57,10 +64,26 @@
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
           max-height: 82px;
-          // line-height: ($bodyLineHeight * 3) - 2px;
+          position: relative;
+          overflow: hidden;
+          
+          
 
-          &.active { 
-            border-bottom: 4px solid $green;
+          &::after{
+            content:"";
+            background-color: $green;
+            position: absolute;
+            height: 4px;
+            width: 100%;
+            bottom: -4px;
+            left: 0px;
+            transition: all 0.5s ease-in-out;
+            -webkit-transition: all 0.5s ease-in-out;
+            
+          }
+
+          &.active::after{ 
+            transform: translateY(-4px);
           }
         }
       }
