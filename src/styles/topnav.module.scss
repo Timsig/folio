@@ -15,7 +15,7 @@
     a {
       text-decoration: none;
       color: $offwhite;
-      transition: all 0.3s ease-in-out; 
+      transition: $transition; 
       
       &:hover {
         color: $white;
@@ -24,11 +24,6 @@
 
       &.active{
       color: $green;
-      
-        &::after {
-          transform:translateY(-4px);
-          transition: inherit;
-        }
       }
     }
 
@@ -67,23 +62,25 @@
           position: relative;
           overflow: hidden;
           
-          
-
           &::after{
             content:"";
-            background-color: $green;
+            background-color: $offwhite;
             position: absolute;
             height: 4px;
             width: 100%;
             bottom: -4px;
             left: 0px;
-            transition: all 0.5s ease-in-out;
-            -webkit-transition: all 0.5s ease-in-out;
-            
+            transition: $transition;
+          }
+
+          &:hover::after {
+            transform: translateY(-4px);
+            background-color: $white;
           }
 
           &.active::after{ 
             transform: translateY(-4px);
+            background-color: $green;
           }
         }
       }
