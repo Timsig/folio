@@ -3,17 +3,21 @@
 .caseStudies {
   max-width: 1024px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
+  // justify-content: space-between;
+  display: grid;
+  grid-gap: $baseUnit * 6;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 
 .caseStudyPreview {
   position: relative;
   background: #ffffff;
-  width: 33%;
-  margin-right: 24px;
+  // width: 33%;
+  // margin-right: 24px;
   text-align: left;
   min-height: 424px; 
+  transition: $transition;
 
   &:last-child {
     margin-right: 0px;
@@ -36,10 +40,11 @@
   }
 
   &>.readMore {
-    font-family: $sansStack;
+    font-family: $serifStack;
     font-size: $bodyFontSize;
     line-height: $baseUnit*7;
-    text-transform: uppercase;
+    font-style: italic;
+    // text-transform: uppercase;
     color: $copy;
     opacity: 0;
     transition: all 0.5s;
@@ -51,6 +56,7 @@
 
   &:hover {
     cursor: pointer;
+    transform: translateY(-1px) scale(1.01);
   }
 
   &:hover>.readMore {
@@ -68,5 +74,9 @@ h2.cardTitle {
   color: $copy;
   letter-spacing: -0.19px;
   margin: 0px $baseUnit*4 0px $baseUnit*4;
+}
+
+a {
+  text-decoration: none;
 }
 
