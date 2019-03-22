@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "gatsby-link";
-import styles from "../styles/casestudies.module.scss";
+import styles from "../styles/casestudies-preview.module.scss";
 
 export default (props) => {
   return (

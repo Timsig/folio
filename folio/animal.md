@@ -6,6 +6,17 @@ main image: /assets/animal-checkout.jpg
 title: Basket case
 intro: Simplifying the path to purchase for online fashionistas
 ---
+
+<!-- ![Animal checkout](/assets/animal-checkout.jpg) -->
+<img src="/assets/animal-checkout.jpg" alt="Animal checkout" />
+
+<aside>
+
+My role <br />Researcher and designer
+
+</aside>
+<main>
+
 # Animal e-commerce checkout redesign
 
 ## The challenge
@@ -26,3 +37,5 @@ This one, https://marvelapp.com/93ga10g, for example, was used for the task, “
 
 ## Deliverables
 High fidelity, pixel perfect annotated designs delivered to commerce cloud solutions partner for development work. These were accompanied by Marvel prototypes to show flow and functionality (see https://marvelapp.com/12h2bd7).
+
+</main>

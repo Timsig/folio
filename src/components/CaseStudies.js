@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles/casestudies.module.scss";
+import styles from "../styles/casestudies-preview.module.scss";
 import { StaticQuery, graphql } from "gatsby";
 import CaseStudyPreview from "./CaseStudyPreview";
 

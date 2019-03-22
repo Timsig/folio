@@ -50,9 +50,17 @@ h4 {
   font-weight: 400;
 }
 
+h6 {
+  font-size: 1em;
+  font-family: $sansStack;
+  color: $copy;
+  font-weight: 400;
+}
+
 p {
   font-family: $serifStack;
   margin: 0 0 $bodyLineHeight 0;
+  color: $copy;
 }
 
 .page-content-outer {
