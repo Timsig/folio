@@ -29,7 +29,8 @@ h1 {
   font-size: 2.45em;
   font-weight: 700;
   line-height: $bodyLineHeight*2;
-  margin: 0 0 $baseUnit*3 0;
+  // margin: 0 0 $baseUnit*3 0;
+  margin: 0;
 }
 
 h2 {

@@ -12,7 +12,7 @@ intro: Simplifying the path to purchase for online fashionistas
 
 <aside>
 
-My role <br />Researcher and designer
+<p class="role"><span class="bold">My role </span><br />Researcher and designer</p>
 
 </aside>
 <main>

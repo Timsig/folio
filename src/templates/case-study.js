@@ -1,18 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import SiteLayout from "../components/SiteLayout";
-import styles from "../styles/casestudy.module.scss";
+import "../styles/casestudy.scss";
 
 export default ({ data }) => {
   const post = data.markdownRemark
-  console.log(post.html);
   return (
-    <SiteLayout>
-      <div className={styles.caseStudyContainer} 
-      dangerouslySetInnerHTML={{ __html: post.html }}>
-        
-      </div>
-    </SiteLayout>
+    <div className="caseStudyBg">
+      <SiteLayout>
+        <div className="caseStudyContainer" 
+        dangerouslySetInnerHTML={{ __html: post.html }}>
+          
+        </div>
+      </SiteLayout>
+    </div>
   )
 }
 
