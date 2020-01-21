@@ -1,3 +1,15 @@
+html { font-size: 112.5% }
+
+// Typescale - major 3rd
+
+$int: 1.25;
+$scale0: 1rem; //body text
+$scale-1: $scale0 / $int;
+$scale1: $scale0 * $int; //h4
+$scale2: $scale1 * $int; //h3
+$scale3: $scale2 * $int; //h2
+$scale4: $scale3 * $int; //h1
+
 $darkblue: #171e41;
 $green: #7cd1a0;
 $purp: #a33d85;
@@ -8,15 +20,15 @@ $background: #f0ede9;
 $sansStack: "Fira Sans", sans-serif;
 $serifStack: "Lora", serif;
 $baseUnit: 4px;
-$bodyFontSize: 18px;
-$bodyLineHeight: 28px; 
+$bodyFontSize: $scale0;
+// $bodyLineHeight: 28px; 
 $transition: all 0.3s ease-in-out;
 
-html, body {
-  font-size: $bodyFontSize;
-  line-height: $bodyLineHeight;
+
+body {
   margin: 0;
   background-color: $background;
+  line-height: $scale2;
 }
 
 h1, h2, h3, h4 {
@@ -26,41 +38,41 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.45em;
+  font-size: $scale4;
   font-weight: 700;
-  line-height: $bodyLineHeight*2;
+  line-height: $scale2*2;
   // margin: 0 0 $baseUnit*3 0;
   margin: 0;
 }
 
 h2 {
-  font-size: 1.95em;
+  font-size: $scale3;
   font-weight: 400;
   line-height: $baseUnit*11;
   margin: 0 0 $baseUnit*6 0;
 }
 
 h3 {
-font-size: 1.56em;
+font-size: $scale2;
 line-height: $baseUnit*9;
 }
 
 h4 {
-  font-size: 1.25em;
+  font-size: $scale1;
   line-height: $baseUnit*8;
   font-weight: 400;
 }
 
-h6 {
-  font-size: 1em;
-  font-family: $sansStack;
-  color: $copy;
-  font-weight: 400;
-}
+// h6 {
+//   font-size: 1em;
+//   font-family: $sansStack;
+//   color: $copy;
+//   font-weight: 400;
+// }
 
 p {
   font-family: $serifStack;
-  margin: 0 0 $bodyLineHeight 0;
+  margin: 0 0 $scale2 0;
   color: $copy;
 }
 
