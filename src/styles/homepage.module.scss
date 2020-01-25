@@ -1,25 +1,34 @@
 @import "./global.scss";
 
 
-.mainImageWrap {
-  height: calc(100vh - 156px);
+.sectionOne {
+  height: calc(100vh - #{$baseUnit}*21);
   width: 100%;
   background-color: $darkblue;
-  background-image: url("/assets/homepage_image.jpg");
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
-  margin-bottom: -$baseUnit*16;
-  display: flex;
-  align-items: center;
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-  h1 {
-    color: $white;
-    font-weight:500;
-    margin-left: $baseUnit * 21;
+  .left{
+    background-image: url("/assets/homepage_image.jpg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    // margin-bottom: -$baseUnit*16;
+  }
 
-    span {
-      color:$purp;
+  .right {
+    display: flex;
+    align-items: center;
+
+    h1 {
+      color: $green;
+      font-weight:500;
+      margin-left: $baseUnit * 21;
+
+      span {
+        color:$purp;
+      }
     }
   }
 }

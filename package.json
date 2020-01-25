@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "gatsby": "^2.0.0",
+    "gatsby-plugin-layout": "^1.1.21",
     "gatsby-plugin-netlify-cms": "^3.0.2",
     "gatsby-plugin-react-helmet": "^3.0.2",
     "gatsby-plugin-sass": "^2.0.3",

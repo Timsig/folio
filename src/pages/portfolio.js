@@ -1,14 +1,14 @@
 import React from "react";
 
 import { graphql } from "gatsby";
-import SiteLayout from "../components/SiteLayout.js";
+
 
 export default ({ data }) =>
   { 
     console.log(data);
   // const { edges: posts } = data.allMarkdownRemark;
     return(
-      <SiteLayout>
+      <React.Fragment>
         <h1>This is the portfolio page</h1>
         {/* {
           posts
@@ -19,7 +19,7 @@ export default ({ data }) =>
                   </div>
                 )
         )} */}
-      </SiteLayout>
+      </React.Fragment>
     )
 }
 
