@@ -1,14 +1,37 @@
 import React from "react";
 
 import { graphql } from "gatsby";
+import ContextConsumer from "../components/Context.js"
 
+class Portfolio extends React.Component {
+  
+  constructor (props) {
+    super(props)
+    this.state = {
+      page: "portfolio",
+      contextSetter: false
+    }
+    
+  }
+  // componentDidMount() {
+  //   // 
+  //   return (<ContextConsumer>
+  //     {({ data, set }) => (
 
-export default ({ data }) =>
-  { 
-    console.log(data);
-  // const { edges: posts } = data.allMarkdownRemark;
-    return(
+  //       set({ curPage: this.state.page })
+  //     )}
+  //   </ContextConsumer>)
+  // }
+  render(){
+    return (
       <React.Fragment>
+        
+        <ContextConsumer>
+          {({ data, set }) => (
+            
+            set({curPage:this.state.page})
+          )}
+        </ContextConsumer>
         <h1>This is the portfolio page</h1>
         {/* {
           posts
@@ -21,10 +44,10 @@ export default ({ data }) =>
         )} */}
       </React.Fragment>
     )
+  }
 }
 
-
-  
+export default Portfolio;  
 
 // export const query = graphql`
 //     query {
@@ -45,22 +68,22 @@ export default ({ data }) =>
 // `
 
 // correct query:
-export const query = graphql`
-query {
-  allMarkdownRemark(
-    filter: {
-      frontmatter: { type: { eq: "case study" } }
-    }
-  ) {
-    edges {
-      node {
-        frontmatter {
-          title
-          featured_image
-          type
-        }
-      }
-    }
-  }
-}
-`
+// export const query = graphql`
+// query {
+//   allMarkdownRemark(
+//     filter: {
+//       frontmatter: { type: { eq: "case study" } }
+//     }
+//   ) {
+//     edges {
+//       node {
+//         frontmatter {
+//           title
+//           featured_image
+//           type
+//         }
+//       }
+//     }
+//   }
+// }
+// `

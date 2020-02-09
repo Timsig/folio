@@ -1,5 +1,5 @@
 import React from "react";
-import CaseStudies from "../components/CaseStudies"
+// import CaseStudies from "../components/CaseStudies"
 import styles from "../styles/homepage.module.scss";
 
 export default () => (
@@ -8,7 +8,7 @@ export default () => (
     <section className={styles.sectionOne}>
       <div className={styles.left}></div>
       <div className={styles.right}>
-        <h1>UX designer</h1>
+        <h1>Homepage</h1>
       </div>
     </section>
     {/* <CaseStudies /> */}

@@ -28,17 +28,38 @@
       }
     }
 
+    .homeLinkWrap{
+      display: flex;
+    
+
+      .homeLink {
+        width: 84px;
+        font-size: $scale1;
+        border-left: 1px solid $green;
+        border-right: 1px solid $green;
+        text-align: center;
+
+        a {
+          display: block;
+          width: 100%;
+        }
+
+        .active {
+          color: $darkblue;
+          background: $green;
+        }
+      }
+      .menuBarIcons{
+        background: $yeller;
+        width: $baseUnit*21;
+        overflow: hidden;
+      }
+    }
+
     
     
   
-    .homeLink {
-      width: 84px;
-      font-size: $bodyFontSize * 1.33;
-      border-left: 1px solid $green;
-      border-right: 1px solid $green;
-      text-align: center;
-      padding-top: 2px; 
-    }
+    
 
     .menu ul {
       display: flex;
