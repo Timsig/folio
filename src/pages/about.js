@@ -1,12 +1,11 @@
 import React from "react";
-
 import ContextConsumer from "../components/Context.js"
+
 class About extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      page: ""
-    }
+ 
+  componentDidMount() {
+    console.log("Did mount " + this.props.data.curPage)
+    this.props.set({ curPage: "about" })
   }
 
   render() {
@@ -15,14 +14,19 @@ class About extends React.Component {
         {({ data, set }) => (
           <React.Fragment>
             <h1>This is the {data.curPage} page</h1>
-            <div onClick={() => set({ curPage: "about" })}>
-              Changer
-            </div>
           </React.Fragment>
-      )}
-        </ContextConsumer>
+        )}
+      </ContextConsumer>
     )
   }
 }
 
-export default About
+const AboutWrap = () => (
+  <ContextConsumer>
+    {({ data, set }) => (
+      <About data={data} set={set} />
+    )}
+  </ContextConsumer>
+)
+
+export default AboutWrap

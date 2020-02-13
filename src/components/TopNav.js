@@ -11,13 +11,19 @@ class Topnav extends React.Component{
     }
   }
 
+  componentDidMount() {
+    this.setState({
+      currentPage: this.props.data.curPage
+    })
+  }
+
   render (){
     
     return(
       <React.Fragment>
         <ContextConsumer>
           {({ data }) => {
-            console.log(data.curPage);//set component state here
+            
           }}
         </ContextConsumer>
         <div className={styles.topNav}>
@@ -25,9 +31,9 @@ class Topnav extends React.Component{
             <nav className={styles.homeLink}>
               <Link to="/" activeClassName={styles.active}>
                 TS
-              </Link>
+                </Link>
             </nav>
-            <div className={styles.menuBarIcons}>
+            <div className={styles.menuBarIcons + " " + this.props.data.curPage}>
 
             </div>
           </div>
@@ -36,24 +42,32 @@ class Topnav extends React.Component{
               <li >
                 <Link to="/portfolio/" activeClassName={styles.active}>
                   PORTFOLIO
-                </Link>
+                  </Link>
               </li>
               <li>
                 <Link to="/about/" activeClassName={styles.active}>
                   ABOUT
-                </Link>
+                  </Link>
               </li>
               <li>
                 <Link to="/contact/" activeClassName={styles.active}>
                   CONTACT
-                </Link>
+                  </Link>
               </li>
             </ul>
           </nav>
         </div>
-      </React.Fragment>
+      </ React.Fragment>
     )
   }
 }
 
-export default Topnav;
+const TopnavWrap = () => (
+  <ContextConsumer>
+    {({ data }) => (
+      <Topnav data={data}  />
+    )}
+  </ContextConsumer>
+)
+
+export default TopnavWrap;

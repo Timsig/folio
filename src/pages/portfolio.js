@@ -5,49 +5,51 @@ import ContextConsumer from "../components/Context.js"
 
 class Portfolio extends React.Component {
   
-  constructor (props) {
-    super(props)
-    this.state = {
-      page: "portfolio",
-      contextSetter: false
-    }
-    
+  componentDidMount() {
+    console.log("Did mount " + this.props.data.curPage)
+    this.props.set({ curPage: "portfolio" })
   }
-  // componentDidMount() {
-  //   // 
-  //   return (<ContextConsumer>
-  //     {({ data, set }) => (
-
-  //       set({ curPage: this.state.page })
-  //     )}
-  //   </ContextConsumer>)
-  // }
+  
   render(){
-    return (
-      <React.Fragment>
-        
-        <ContextConsumer>
-          {({ data, set }) => (
-            
-            set({curPage:this.state.page})
-          )}
-        </ContextConsumer>
-        <h1>This is the portfolio page</h1>
-        {/* {
-          posts
-            .filter(post => post.node.frontmatter.type === "case study")
-                .map(({ node }) => (
-                  <div key={node.id}>
-                    <h2 key={node.id}>{node.frontmatter.title}</h2>
-                  </div>
-                )
-        )} */}
-      </React.Fragment>
-    )
+    return(
+      <h1>This is the {this.props.data.curPage} page</h1>
+    );
   }
 }
 
-export default Portfolio;  
+const PortfolioWrap = () => (
+  <ContextConsumer>
+    {({ data, set }) => (
+      <Portfolio data={data} set={set} />
+    )}
+  </ContextConsumer>
+)
+    
+    // (
+    //   <React.Fragment>
+        
+    //     <ContextConsumer>
+    //       {({ data, set }) => (
+            
+    //         <h2>{data.curPage}</h2>
+    //       )}
+    //     </ContextConsumer>
+    //     <h1>This is the portfolio page</h1>
+    //   //   {/* {
+      //     posts
+      //       .filter(post => post.node.frontmatter.type === "case study")
+      //           .map(({ node }) => (
+      //             <div key={node.id}>
+      //               <h2 key={node.id}>{node.frontmatter.title}</h2>
+      //             </div>
+      //           )
+      //   )} */}
+//       </React.Fragment>
+//     )
+//   }
+// }
+
+export default PortfolioWrap;  
 
 // export const query = graphql`
 //     query {
