@@ -1,5 +1,6 @@
 import React from "react";
-import styles from "../styles/topnav.module.scss";
+// import styles from "../styles/topnav.module.scss";
+import "../styles/topnav.scss"
 import Link from "gatsby-link";
 import ContextConsumer from "./Context.js";
 
@@ -26,31 +27,33 @@ class Topnav extends React.Component{
             
           }}
         </ContextConsumer>
-        <div className={styles.topNav}>
-          <div className={styles.homeLinkWrap}>
-            <nav className={styles.homeLink}>
-              <Link to="/" activeClassName={styles.active}>
+        <div className="topNav">
+          <div className="homeLinkWrap">
+            <nav className="homeLink">
+              <Link to="/" activeClassName="active">
                 TS
                 </Link>
             </nav>
-            <div className={styles.menuBarIcons + " " + this.props.data.curPage}>
-
+            <div className="menuBarIcons" id={this.props.data.curPage}>
+              <div className="yellow"></div>
+              <div className="blue"></div>
+              <div className="magenta"></div>
             </div>
           </div>
-          <nav className={styles.menu}>
+          <nav className="menu">
             <ul>
               <li >
-                <Link to="/portfolio/" activeClassName={styles.active}>
+                <Link to="/portfolio/" activeClassName="active">
                   PORTFOLIO
                   </Link>
               </li>
               <li>
-                <Link to="/about/" activeClassName={styles.active}>
+                <Link to="/about/" activeClassName="active">
                   ABOUT
                   </Link>
               </li>
               <li>
-                <Link to="/contact/" activeClassName={styles.active}>
+                <Link to="/contact/" activeClassName="active">
                   CONTACT
                   </Link>
               </li>

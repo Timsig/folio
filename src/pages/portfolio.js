@@ -4,13 +4,19 @@ import { graphql } from "gatsby";
 import ContextConsumer from "../components/Context.js"
 
 class Portfolio extends React.Component {
+
+  constructor(props) {
+    super(props)
+      
+  }
   
-  componentDidMount() {
-    console.log("Did mount " + this.props.data.curPage)
+  componentDidMount() { 
     this.props.set({ curPage: "portfolio" })
+    console.log("Did mount " + this.props.data.curPage)
   }
   
   render(){
+      
     return(
       <h1>This is the {this.props.data.curPage} page</h1>
     );
@@ -20,7 +26,7 @@ class Portfolio extends React.Component {
 const PortfolioWrap = () => (
   <ContextConsumer>
     {({ data, set }) => (
-      <Portfolio data={data} set={set} />
+      <Portfolio data={data} set={set}/>
     )}
   </ContextConsumer>
 )

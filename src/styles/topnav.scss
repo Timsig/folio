@@ -52,10 +52,82 @@
         width: $baseUnit*21;
         overflow: hidden;
         position: relative;
+      
+        .yellow, .magenta, .blue {
+          position: absolute;
+          width: 40%;
+          top: 30%;
+          left: -40%;
+          transition: all 0.3s ease-in-out;
+        }
+
+        .yellow:after, .magenta:after, .blue:after {
+          content:"";
+          display:  block;
+          padding-bottom: 100%;
+        }
+
+        .yellow {
+          background: $yellow;  
+        }
+
+        .magenta {
+          background: $magenta;  
+        }
+
+        .blue {
+          background: $blue;
+        }
       }
+      #home {
+        .yellow, .magenta, .blue {
+          transform: none;
+        }
+      }
+      #portfolio {
+        .yellow {
+          z-index: 0;
+          transform: translate($baseUnit * 12, -$baseUnit * 2);
+        }
+        .blue {
+          z-index: 5;
+          transform: translateX($baseUnit * 14) ;
+        }
+        .magenta {
+          z-index: 10;
+          transform: translate($baseUnit * 16, $baseUnit * 2) ;
+        }
+      }
+
+      #about {
+        .yellow {
+          transform: translateX($baseUnit * 14);
+        }
+        .magenta {
+          transform: translate($baseUnit * 8, $baseUnit * 6) scale(0.5);
+        }
+        .blue {
+          transform: translate($baseUnit * 5, $baseUnit * 9) scale(0.25);
+        }
+      }
+
+      #contact {
+        .yellow {
+          z-index: 10;
+          transform: translate($baseUnit * 16, $baseUnit*2) scale(0.25);
+        }
+        .magenta {
+          transform: translate($baseUnit * 14, -$baseUnit * 2) rotate(45deg);
+        }
+        .blue {
+          z-index: 5;
+          transform: translate($baseUnit * 14, $baseUnit * 4);
+        }
+      }
+
       
     }
-  }  
+    
 
   .menu ul {
     display: flex;
@@ -103,6 +175,5 @@
       }
     }
   }
-  
-  
-
+}
+    
