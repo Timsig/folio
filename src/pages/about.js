@@ -4,8 +4,11 @@ import ContextConsumer from "../components/Context.js"
 class About extends React.Component {
  
   componentDidMount() {
-    console.log("Did mount " + this.props.data.curPage)
     this.props.set({ curPage: "about" })
+  }
+
+  componentWillUnmount() {
+    this.props.set({ prevPage: "about" })
   }
 
   render() {

@@ -79,12 +79,12 @@
           background: $blue;
         }
       }
-      #home {
-        .yellow, .magenta, .blue {
-          transform: none;
-        }
-      }
-      #portfolio {
+      // #home {
+      //   .yellow, .magenta, .blue {
+      //     transform: none;
+      //   }
+      // }
+      .portfolio {
         .yellow {
           z-index: 0;
           transform: translate($baseUnit * 12, -$baseUnit * 2);
@@ -99,7 +99,7 @@
         }
       }
 
-      #about {
+      .about {
         .yellow {
           transform: translateX($baseUnit * 14);
         }
@@ -111,7 +111,7 @@
         }
       }
 
-      #contact {
+      .contact {
         .yellow {
           z-index: 10;
           transform: translate($baseUnit * 16, $baseUnit*2) scale(0.25);

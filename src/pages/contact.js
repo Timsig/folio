@@ -4,7 +4,6 @@ import ContextConsumer from "../components/Context.js"
 class Contact extends React.Component {
   
   componentDidMount() {
-    console.log("Did mount " + this.props.data.curPage)
     this.props.set({ curPage: "contact" })
   }
 

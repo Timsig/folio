@@ -7,26 +7,22 @@ import ContextConsumer from "./Context.js";
 class Topnav extends React.Component{
   constructor(props){
     super(props);
-    this.state = {
-      currentPage: "home"
-    }
+    // this.state = {
+    //   currentPage: "",
+    //   previousPage:"",
+    // }
   }
 
-  componentDidMount() {
-    this.setState({
-      currentPage: this.props.data.curPage
-    })
-  }
+  // componentDidMount() {
+  //   this.setState({
+  //     currentPage: this.props.data.curPage
+  //   })
+  // }
 
   render (){
     
     return(
       <React.Fragment>
-        <ContextConsumer>
-          {({ data }) => {
-            
-          }}
-        </ContextConsumer>
         <div className="topNav">
           <div className="homeLinkWrap">
             <nav className="homeLink">
@@ -34,7 +30,8 @@ class Topnav extends React.Component{
                 TS
                 </Link>
             </nav>
-            <div className="menuBarIcons" id={this.props.data.curPage}>
+            {/* <div className="menuBarIcons" id={this.props.data.curPage}> */}
+            <div className={`menuBarIcons ${this.props.data.prevPage} ${this.props.data.curPage}`}>
               <div className="yellow"></div>
               <div className="blue"></div>
               <div className="magenta"></div>

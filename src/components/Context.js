@@ -4,7 +4,8 @@ import React from "react"
 const defaultContextValue = {
   data: {
     // set your initial data shape here
-    curPage: "home",
+    prevPage: "",
+    curPage: "",
   },
   set: () => { },
 }
@@ -23,10 +24,19 @@ class ContextProviderComponent extends React.Component {
   }
 
   setData(newData) {
-    this.setState(state => ({
+    console.log("current state: ", this.state.data.curPage, this.state.data.prevPage)
+    // let newState = {
+    //   curPage: newData.curPage,
+    //   prevPage: this.state.data.curPage,
+    // }
+    // console.log("newState: ", newState);
+    this.setState(prevState => ({
       data: {
-        ...state.data,
-        ...newData,
+        // ...state.data,
+        // ...newData,
+        // ...newState,
+        curPage: newData.curPage,
+        prevPage: prevState.data.curPage,
       },
     }))
   }

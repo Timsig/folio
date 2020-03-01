@@ -4,9 +4,13 @@ import styles from "../styles/homepage.module.scss";
 import ContextConsumer from "../components/Context.js"
 
 class  Homepage extends React.Component {
-  componentDidMount() {
-    console.log("Did mount " + this.props.data.curPage)
+  
+  componentDidMount() {  
     this.props.set({ curPage: "home" })
+  }
+
+  componentWillUnmount() {
+    this.props.set({ prevPage: "home" })
   }
 
   render(){

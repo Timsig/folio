@@ -7,16 +7,14 @@ class Portfolio extends React.Component {
 
   constructor(props) {
     super(props)
-      
+        
   }
   
   componentDidMount() { 
-    this.props.set({ curPage: "portfolio" })
-    console.log("Did mount " + this.props.data.curPage)
+    this.props.set({ curPage: "portfolio" })  
   }
-  
+
   render(){
-      
     return(
       <h1>This is the {this.props.data.curPage} page</h1>
     );
