@@ -24,24 +24,28 @@ class ContextProviderComponent extends React.Component {
   }
 
   setData(newData) {
-    console.log("current state: ", this.state.data.curPage, this.state.data.prevPage)
-    // let newState = {
-    //   curPage: newData.curPage,
-    //   prevPage: this.state.data.curPage,
-    // }
-    // console.log("newState: ", newState);
-    this.setState(prevState => ({
-      data: {
-        // ...state.data,
-        // ...newData,
-        // ...newState,
+    
+    let prev = this.state.data.curPage;
+    
+    // this.setState(prevState => ({
+    //   data: {
+    //     // ...state.data,
+    //     // ...newData,
+    //     // ...newState,
+    //     curPage: newData.curPage,
+    //     prevPage: prev,
+    //   },
+    // }))
+    this.setState({
+      data:{
         curPage: newData.curPage,
-        prevPage: prevState.data.curPage,
-      },
-    }))
+        prevPage: prev,
+      }
+    })
   }
 
   render() {
+    console.log("current state: ", this.state.data.curPage, this.state.data.prevPage)
     return <Provider value={this.state}>{this.props.children}</Provider>
   }
 }
