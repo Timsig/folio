@@ -33,7 +33,7 @@ class Topnav extends React.Component{
                 TS
                 </Link>
             </nav>
-            <div className={styles.menuBarIcons + " " + this.props.data.curPage}>
+            <div className={styles.menuBarIcons} id={styles[this.props.data.curPage]}>
 
             </div>
           </div>
