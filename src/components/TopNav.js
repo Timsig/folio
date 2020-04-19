@@ -34,7 +34,9 @@ class Topnav extends React.Component{
                 </Link>
             </nav>
             <div className={styles.menuBarIcons} id={styles[this.props.data.curPage]}>
-
+              <div className={styles.yellow}></div>
+              <div className={styles.blue}></div>
+              <div className={styles.magenta}></div>
             </div>
           </div>
           <nav className={styles.menu}>

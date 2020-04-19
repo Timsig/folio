@@ -1,5 +1,7 @@
 @import "./global.scss";
 
+$menuiconsunit: 17px;
+
 .topNav {
   background-color: $darkblue;
   margin: 0;
@@ -18,20 +20,18 @@
       color: $offwhite;
       transition: $transition; 
       
-      &:hover {
-        color: $white;
-        
-      }
+        &:hover {
+          color: $white; 
+        }
 
-      &.active{
-      color: $green;
-      }
+        &.active{
+        color: $green;
+        }
     }
 
     .homeLinkWrap{
       display: flex;
     
-
       .homeLink {
         width: 84px;
         font-size: $scale1;
@@ -39,31 +39,96 @@
         border-right: 1px solid $green;
         text-align: center;
 
-        a {
-          display: block;
-          width: 100%;
-        }
+          a {
+            display: block;
+            width: 100%;
+          }
 
-        .active {
-          color: $darkblue;
-          background: $green;
-        }
+          .active {
+            color: $darkblue;
+            background: $green;
+          }
       }
+
       .menuBarIcons{
-        background: $yeller;
         width: $baseUnit*21;
         overflow: hidden;
+        position: relative;
+
+        .yellow, .magenta, .blue {
+          position: absolute;
+          width: 34px;
+          top: 25px;
+          left: -34px;
+          // transition: all 0.3s ease-in-out;
+        }
+      
+        .yellow:after, .magenta:after, .blue:after {
+            content:"";
+            display:  block;
+            padding-bottom: 100%;
+          }
+
+          .yellow {
+            background: $yellow;  
+          }
+
+          .magenta {
+            background: $magenta;  
+          }
+
+          .blue {
+            background: $blue;
+          }
       }
-      #about {
-        background: tomato;
+      #home {
+        .yellow, .magenta, .blue {
+          transform: none;
+        }
       }
+
+      #portfolio {
+          .yellow {
+            z-index: 0;
+            transform: translate($menuiconsunit * 3, -7px);
+          }
+          .blue {
+            z-index: 5;
+            transform: translateX(($menuiconsunit * 3) + ($baseUnit * 2)) ;
+          }
+          .magenta {
+            z-index: 10;
+            transform: translate(($menuiconsunit * 3) + ($baseUnit * 4), $baseUnit * 2) ;
+          }
+        }
+
+        #about {
+          .yellow {
+            transform: translateX(($menuiconsunit * 2) + 25px);
+          }
+          .magenta {
+            transform: translate($baseUnit * 8, $menuiconsunit * 1.5) scale(0.5);
+          }
+          .blue {
+            transform: translate($baseUnit * 5, $menuiconsunit * 2.25) scale(0.25);
+          }
+        }
+
+        #contact {
+          .yellow {
+            z-index: 10;
+            transform: translate($baseUnit * 16, $baseUnit*2) scale(0.25);
+          }
+          .magenta {
+            transform: translate($baseUnit * 14, -$baseUnit * 2) rotate(45deg);
+          }
+          .blue {
+            z-index: 5;
+            transform: translate($baseUnit * 14, $baseUnit * 4);
+          }
+        }
       
     }
-
-    
-    
-  
-    
 
     .menu ul {
       display: flex;
@@ -111,4 +176,5 @@
         }
       }
     }
+  
 }
