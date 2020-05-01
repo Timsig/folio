@@ -1,4 +1,4 @@
-html { font-size: 112.5% }
+html { font-size: 100% }
 
 // Typescale - major 3rd
 
@@ -21,7 +21,7 @@ $white: #ffffff;
 $copy: #3a4455;
 $background: #f0ede9;
 $sansStack: "Fira Sans", sans-serif;
-$serifStack: "Lora", serif;
+$serifStack: "Merriweather", serif;
 $baseUnit: 4px;
 $bodyFontSize: $scale0;
 // $bodyLineHeight: 28px; 
@@ -31,19 +31,20 @@ $transition: all 0.3s ease-in-out;
 body {
   margin: 0;
   background-color: $background;
-  line-height: $scale2;
+  line-height: $baseUnit * 7;
 }
 
 h1, h2, h3, h4 {
   font-family: $sansStack;
   color: $darkblue;
+  margin: 0;
   
 }
 
 h1 {
   font-size: $scale4;
   font-weight: 700;
-  line-height: $scale2*2;
+  line-height: $baseUnit * 12;
   // margin: 0 0 $baseUnit*3 0;
   margin: 0;
 }
@@ -51,18 +52,18 @@ h1 {
 h2 {
   font-size: $scale3;
   font-weight: 400;
-  line-height: $baseUnit*11;
-  margin: 0 0 $baseUnit*6 0;
+  line-height: $baseUnit*10;
+  // margin: 0 0 $baseUnit*6 0;
 }
 
 h3 {
 font-size: $scale2;
-line-height: $baseUnit*9;
+line-height: $baseUnit*8;
 }
 
 h4 {
   font-size: $scale1;
-  line-height: $baseUnit*8;
+  line-height: $baseUnit*7;
   font-weight: 400;
 }
 
@@ -74,6 +75,7 @@ h4 {
 // }
 
 p {
+  font-size: $scale0;
   font-family: $serifStack;
   margin: 0 0 $scale2 0;
   color: $copy;

@@ -5,11 +5,11 @@ $menuiconsunit: 17px;
 .topNav {
   background-color: $darkblue;
   margin: 0;
-  height: $baseUnit * 21;
-  padding: 0 $baseUnit * 21 0 $baseUnit * 21;
+  height: $baseUnit * 20;
+  padding: 0 $baseUnit * 20 0 $baseUnit * 20;
   font-family: $sansStack;
   font-weight: 500;
-  line-height: $baseUnit * 21;
+  line-height: $baseUnit * 20;
   letter-spacing: 0.05em;
   display: flex;
   justify-content: space-between;
@@ -33,7 +33,7 @@ $menuiconsunit: 17px;
       display: flex;
     
       .homeLink {
-        width: 84px;
+        width: $baseUnit*20;
         font-size: $scale1;
         border-left: 1px solid $green;
         border-right: 1px solid $green;
@@ -51,7 +51,7 @@ $menuiconsunit: 17px;
       }
 
       .menuBarIcons{
-        width: $baseUnit*21;
+        width: $baseUnit*20;
         overflow: hidden;
         position: relative;
 
@@ -138,7 +138,7 @@ $menuiconsunit: 17px;
       li {
         
         margin: 0 24px 0 24px;
-        padding-top: 2px;
+        // padding-top: 2px;
         display: flex;
 
         &:last-child {
@@ -149,7 +149,7 @@ $menuiconsunit: 17px;
           box-sizing: border-box;
           -moz-box-sizing: border-box;
           -webkit-box-sizing: border-box;
-          max-height: 82px;
+          max-height: 80px;
           position: relative;
           overflow: hidden;
           

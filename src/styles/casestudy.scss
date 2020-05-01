@@ -1,5 +1,15 @@
 @import "./global.scss";
 
+// code to create panels that break out of central container, but flow with other content
+// .full-bleed {
+//   width: 100vw;
+//   margin-left: calc(50% - 50vw);
+// }
+
+// Code for responsive grid w. min cell width - last line makes all rows 75px high
+// grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//     grid-auto-rows: 75px;
+
 .caseStudyBg {
   background-color: $white;
 }
@@ -8,47 +18,60 @@
     max-width: 1024px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-column-gap: $baseUnit * 6;
-    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: $baseUnit * 8;
+    // grid-template-rows: repeat(3, auto);
     // grid-auto-flow: row; 
 
+  .lead-image {
+    grid-column: 1 / -1;
+    background: $darkblue;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
 
-  img {
-      grid-column: 1 / 9;
-    }
-
-
-  aside {
-    grid-column: 1 / 3;
-    
-    .role {
-      font-family: $sansStack;
-      font-weight: 400;
-      line-height: $baseUnit * 6;
-      margin-top: $baseUnit*12;
-
-      .bold {
-        font-weight: 500;
-      }
+    img {
+      max-width: 1024px;
+      margin: 48px auto 0 auto;
+      display: block;
+      
     }
   }
 
   
 
-  main {
-    grid-column: 4 / 9;
 
-    h1, h2 {
+  // aside {
+  //   grid-column: 1 / 3;
+    
+  //   .role {
+  //     font-family: $sansStack;
+  //     font-weight: 400;
+  //     line-height: $baseUnit * 6;
+  //     margin-top: $baseUnit*12;
+
+  //     .bold {
+  //       font-weight: 500;
+  //     }
+  //   }
+  // }
+
+  h1 {
+      grid-column: 1 / -1;
       margin-top: $baseUnit*12;
+    }
+
+  main {
+    grid-column: 4 / 11;
+
+    
+
+    h2 {
+      margin: $baseUnit*6 0 0 0;
     }
 
     
   }
 
-  main h1,
-  main h2 {
-    margin-top: $baseUnit*12;
-  }
+  
   
 }

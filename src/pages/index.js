@@ -1,5 +1,5 @@
 import React from "react";
-// import CaseStudies from "../components/CaseStudies"
+import CaseStudies from "../components/CaseStudies"
 import styles from "../styles/homepage.module.scss";
 import ContextConsumer from "../components/Context.js"
 
@@ -18,7 +18,7 @@ class  Homepage extends React.Component {
             <h1>{this.props.data.curPage}</h1>
           </div>
         </section>
-        {/* <CaseStudies /> */}
+        <CaseStudies />
       </div>
     )
   }

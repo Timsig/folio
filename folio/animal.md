@@ -8,16 +8,13 @@ intro: Simplifying the path to purchase for online fashionistas
 ---
 
 <!-- ![Animal checkout](/assets/animal-checkout.jpg) -->
-<img src="/assets/animal-checkout.jpg" alt="Animal checkout" />
+<div class="lead-image">
+  <img src="/assets/animal-checkout.jpg" alt="Animal checkout" />
+</div>
 
-<aside>
-
-<p class="role"><span class="bold">My role </span><br />Researcher and designer</p>
-
-</aside>
-<main>
 
 # Animal e-commerce checkout redesign
+<main>
 
 ## The challenge
 There was growing concern among senior stakeholders at the disappointing revenues being delivered by the e-commerce website. Google Analytics and Hotjar revealed fall-off rates of over 60% during the checkout process. There was a clear business imperative to improve this situation as soon as possible. New delivery options (CollectPlus and International) also needed to be added to the checkout flow.
@@ -39,3 +36,9 @@ This one, https://marvelapp.com/93ga10g, for example, was used for the task, “
 High fidelity, pixel perfect annotated designs delivered to commerce cloud solutions partner for development work. These were accompanied by Marvel prototypes to show flow and functionality (see https://marvelapp.com/12h2bd7).
 
 </main>
+
+<aside>
+
+<p class="role"><span class="bold">My role </span><br />Researcher and designer</p>
+
+</aside>
